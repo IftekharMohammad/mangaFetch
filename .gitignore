@@ -1,0 +1,10 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#project builds
+/mangaFetch/*.pyc
+/mangaFetch/spiders/*.pyc
+/mangaFetch/__pycache__
+/mangaFetch/spiders/__pycache__
+
