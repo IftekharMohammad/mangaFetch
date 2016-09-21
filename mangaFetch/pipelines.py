@@ -6,7 +6,7 @@ from scrapy.http import Request
 class MangafetchPipeline(ImagesPipeline):
 
 	def change_filename(self, key, response):
-		return "%s/%s/%s.jpg"%(response.meta['MangaName'][0],response.meta['filename'][0],response.meta['title'][0])
+		return "Downloads/%s/%s/%s.jpg"%(response.meta['MangaName'][0],response.meta['filename'][0],response.meta['title'][0])
         
 	def get_media_requests(self, item, info):
 		return [Request(x, meta={'title': item["title"],'filename': item["filename"],'MangaName': item["MangaName"]})

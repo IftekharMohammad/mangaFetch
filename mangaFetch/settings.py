@@ -8,6 +8,9 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
+import os
+
+PROJECT_ROOT = os.path.dirname(__file__)
 
 BOT_NAME = 'mangaFetch'
 
@@ -15,7 +18,7 @@ SPIDER_MODULES = ['mangaFetch.spiders']
 NEWSPIDER_MODULE = 'mangaFetch.spiders'
 
 ITEM_PIPELINES = {'mangaFetch.pipelines.MangafetchPipeline':1}
-IMAGES_STORE = '/home/iftekhar/DownloadedManga'
+IMAGES_STORE = os.path.dirname(PROJECT_ROOT)
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'mangaFetch (+http://www.yourdomain.com)'
